@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const mute = document.querySelector(".mute");
 	const repeat = document.querySelector(".repeat");
 	const iconMute = mute.querySelector('i');
+	const playButton = document.querySelector('.video');
 
 	media.addEventListener("click", playPause);
 	function playPause() {
@@ -53,11 +54,13 @@ document.addEventListener("DOMContentLoaded", () => {
 			media.setAttribute("playing", "true");
 			media.play();
 			controls.classList.add('controls-active');
+			playButton.classList.toggle('video-no-after');
 		}else{
 			media.setAttribute("playing", "false");
 			media.setAttribute("paused", "");
 			media.pause();
 			controls.classList.remove('controls-active');
+			playButton.classList.toggle('video-no-after');
 		}
 
 		if (media.getAttribute("playing") === "true") {
@@ -92,6 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			media.currentTime = time; // nastaveni videa do prideleneho casu
 			media.play(); // pusteni videa
 			controls.classList.add('controls-active'); // zobrazeni ikonek na ovladani
+			playButton.classList.add('video-no-after');
 		});
 	});
 
