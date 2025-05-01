@@ -571,8 +571,6 @@ input,textarea{
 	margin: 0 auto;
 }
 
-
-
 video{
 	width: 100%;
 	height: auto;
@@ -614,6 +612,9 @@ video{
 .video-controls button:nth-child(2){
 	float: right;
 }
+
+
+/********************************************** accordion ********************/
 .accordion{
 	background-color: var(--secondary-color);
 	color: var(--tertiary-color-dark);
@@ -667,12 +668,74 @@ video{
 .accordion-active{
 	max-height: 500px;
 }
+/* video section end */
+/*history section*/
+
+.history-section{
+	margin: 2rem;
+}
+.history-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	position: relative;
+	padding: 1rem 0;
+	width: 100%;
+}
+.history-container:after{
+	content: "";
+	width: 5px;
+	height: 100%;
+	background: var(--primary-color);
+	position: absolute;
+	left: 50%;
+	top: 0;
+}
+.history-card{
+	margin: 20px;
+	max-width: 500px;
+	min-width: 200px;
+	background-color: var(--tertiary-color);
+	padding: 2rem;
+	border-radius: 10px;
+	z-index: 5;
+	text-align: start;
+	position: relative;
+	box-shadow: 2px 10px 10px #652222;
+}
+.history-card:after{
+	content: "";
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #C1A173;
+	top: -10px;
+	position: absolute;
+	left: calc(50% - 3px - 5px);
+	border: 3px solid var(--tertiary-color);
+}
+.history-card-header{
+	margin-bottom: 10px;
+}
+.history-card-header h2{
+	color: #C1A173;
+}
+.history-card-body p{
+	font-size: 1.05rem;
+	letter-spacing: 1px;
+	color: white;
+}
+
+/*history section end*/
 
 /* Back to top button */
 .back-to-top-container{
 	position: fixed;
 	bottom: 30px;
 	right: 30px;
+	z-index: 6;
 }
 .back-to-top-button{
 	display: none;
@@ -684,6 +747,7 @@ video{
 	font-size: 16px;
 	box-shadow: 0 10px 30px rgba(0,0,0,0.18);
 	transition: all .35s ease;
+	z-index: 6;
 }
 
 .back-to-top-button:hover:after{
