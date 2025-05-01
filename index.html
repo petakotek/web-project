@@ -1,0 +1,204 @@
+<!-- Fakulta informačních technologií VUT v Brně -->
+<!-- Projekt do předmětu ITW -->
+<!-- Autor: Petr Kotek (xkotekp00) -->
+<!-- File: index.html -->
+
+<!doctype html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>John Keating</title>
+	<meta name="author" content="Petr Kotek (xkotekp00)">
+  	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!--	font for paragraphs-->
+	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<!--	font for headers-->
+	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+	<script src="script.js"></script>
+
+</head>
+<body>
+<header>
+<!--	navigace-->
+	<nav>
+		<div class="container">
+			<div class="logo">
+				<a class="nav-link-hover" href="#">John Keating</a>
+			</div>
+			<div class="nav-menu">
+				<ul class="nav-links">
+					<li><a href="#">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#society">Society</a></li>
+					<li><a class="nav-links-active" href="#contact">Follow me</a></li>
+				</ul>
+			</div>
+<!--			<i class="fa-solid fa-xmark"></i>-->
+			<button id="hamburger"><i class="fa-solid fa-bars"></i></button>
+		</div>
+	</nav>  <!--	konec navigace-->
+
+<!--	nav wrapper -->
+	<div class="wrapper header-content">
+		<div class="wrapper-text">
+			<h1 class="poem-line">O Captain! My Captain!</h1>
+			<p class="subtitle">our fearful trip is done</p>
+			<p class="quote">“No matter what anybody tells you,<br> words and ideas can change the world.”</p>
+		</div>
+		<div class="img">
+			<img src="img/robin.jpg" alt="Robin Williams as John Keating" class="header-img">
+		</div>
+	</div> <!--	nav wrapper end -->
+</header> <!--header end-->
+
+	<main>
+		<article>
+			<section class="about-section" id="about">
+				<div class="about-card">
+					<div class="about-card-image">
+						<img src="img/1724.webp" alt="John Keating teaching students" loading="lazy">
+					</div>
+					<div class="about-card-content">
+						<h1>Free thinkers at seventeen!</h1>
+						<p>Oh me! Oh life! of the questions of these recurring,
+							Of the endless trains of the faithless, of cities fill’d with the foolish,
+							Of myself forever reproaching myself, (for who more foolish than I, and who more faithless?)
+							Of eyes that vainly crave the light, of the objects mean, of the struggle ever renew’d.</p>
+					</div>
+				</div>
+			</section>
+			<section class="quotes-section" id="society">
+				<h2 class="header-section">Dead Poets Society</h2>
+				<div class="quote-container">
+					<div class="quote-card">
+						<blockquote>
+							"Carpe diem. Seize the day, boys. Make your lives extraordinary."
+						</blockquote>
+						<blockquote>
+							"We don’t read and write poetry because it’s cute. We read and write poetry because we are members of the human race."
+						</blockquote>
+						<blockquote>
+							"No matter what anybody tells you, words and ideas can change the world."
+						</blockquote>
+						<blockquote>
+							"Just when you think you know something, you have to look at it in another way."
+						</blockquote>
+					</div>
+					<div class="quote-img">
+						<img src="img/reading.jpg" alt="">
+					</div>
+				</div>
+			</section>
+			<section class="video-section">
+				<div class="video-container">
+					<div class="video-header">
+						<h2 class="header-section">Words and language</h2>
+						<p>Click and Play <span>NOW</span></p>
+					</div>
+					<div id="videoPlayer" class="video-player">
+						<video class="video-after">
+							<source src="img/what_will_your_verse_be.mp4" type="video/mp4">
+							Váš prohlížeč nepodporuje přehrávání videa.
+						</video>
+						<div class="video-controls">
+							<button class="mute" aria-label="mute"><i class="fa-solid fa-volume-high"></i></button>
+							<button class="repeat" aria-label="repeat"><i class="fa-solid fa-repeat"></i></button>
+						</div>
+					</div>
+					<button class="accordion">Explore text...</button>
+					<div class="accordion-content">
+						<i>Každý z těchto odstavců je odkaz, který reaguje s videem, prosím vyzkoušejte :)<br><br></i>
+						<p class="video-typescript" aria-time="0">Words and language</p>
+						<p class="video-typescript" aria-time="1.5">no matter what anybody tells you</p>
+						<p class="video-typescript" aria-time="4">words and ideas can change the world.</p>
+						<p class="video-typescript" aria-time="8">I see that look in Mr Pitts' eye, like "19th century literature has nothing to do with going to business school or medical school", right? Maybe.</p>
+						<p class="video-typescript" aria-time="16">Mr Hopkins you may agree with him thinking</p>
+						<p class="video-typescript" aria-time="19">"yes we should simply study our Mr Pritchard and learn our rhyme and meter and go quietly about the business of achieving other ambitions".</p>
+						<p class="video-typescript" aria-time="28">A little secret for you, huddle up. Huddle up!</p>
+						<p class="video-typescript" aria-time="38">We don't read and write poetry because it's cute. </p>
+						<p class="video-typescript" aria-time="44">We read and write poetry because we are members of the human race</p>
+						<p class="video-typescript" aria-time="49">and the human race is filled with passion. </p>
+						<p class="video-typescript" aria-time="53">Medicine, law, business, engineering, these are noble pursuits and necessary to sustain life. </p>
+						<p class="video-typescript" aria-time="60">But poetry, beauty, romance, love, these are what we stay alive for.</p>
+						<p class="video-typescript" aria-time="69">To quote from Whitman:</p>
+						<p class="video-typescript" aria-time="71">O me! O life! of the questions of these recurring, </p>
+						<p class="video-typescript" aria-time="76.5">of the endless trains of the faithless</p>
+						<p class="video-typescript" aria-time="79.5">of cities filled with the foolish</p>
+						<p class="video-typescript" aria-time="82">what good amid these, O me! O life!</p>
+						<p class="video-typescript" aria-time="85">Answer: That you are here, that life exists and </p>
+						<p class="video-typescript" aria-time="92">identity, that the powerful play goes on and you may contribute a verse</p>
+						<p class="video-typescript" aria-time="101">That the powerful play goes on and you may contribute a verse</p>
+						<p class="video-typescript" aria-time="111.5">What will your verse be?</p>
+					</div>
+				</div>
+			</section>
+			<section class="contact-section" id="contact">
+				<div class="contact-card">
+					<h2 class="header-section">Contact</h2>
+					<div class="contact-card-container">
+						<div class="contact-card-content">
+							<form class="contact-form">
+								<div class="form-group">
+									<input type="text" id="name" placeholder="" required>
+									<label for="name">Name</label>
+								</div>
+								<div class="form-group">
+
+									<input type="email" id="email" placeholder="" required>
+									<label for="email">Email</label>
+								</div>
+								<div class="form-group">
+
+									<textarea id="message" placeholder="" required></textarea>
+									<label for="message">Message</label>
+								</div>
+								<button class="btn-submit" type="submit">Odeslat</button>
+							</form>
+						</div>
+						<div class="contact-links">
+							<div class="contact-img">
+								<img src="img/Ocaptainmycptain.jpg" alt="">
+							</div>
+							<div class="contact-links-link">
+								<div>
+									<a href="#"><i class="fa-brands fa-instagram"></i></a>
+								</div>
+								<div>
+									<a href="#"><i class="fa-brands fa-facebook"></i></a>
+								</div>
+								<div>
+									<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+								</div>
+								<div>
+									<a href="#"><i class="fa-solid fa-inbox"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> <!--section contact end-->
+		</article>
+	</main>
+	<div class="back-to-top-container">
+		<button class="back-to-top-button" id="btnTop"><i class="fa-solid fa-arrow-up"></i></button>
+	</div>
+	<div class="color-palette">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<footer>
+		<p>Made by <a href="mailto:xkotekp00@stud.fit.vut.cz" target="_blank">Petr Kotek (xkotekp00)</a> in honor of Robin Williams</p>
+		<p>Created for school use only</p>
+	</footer>
+</body>
+</html>
