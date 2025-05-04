@@ -55,8 +55,9 @@ button{
 a{
 	color: var(--tertiary-color);
 }
+/*nastaveni navigacniho panelu*/
 nav{
-	position: fixed;
+	position: fixed; /* fixni pozice*/
 	top: 5px;
 	border: none;
 	border-radius: 10px;
@@ -67,7 +68,7 @@ nav{
 	box-shadow: 0 15px 15px rgba(0,0,0,0.18);
 	background: var(--tertiary-color-dark);
 }
-
+/* container navigace */
 .container{
 	position: relative;
 	max-width: 1300px;
@@ -89,6 +90,7 @@ nav{
 	margin: 0;
 	display: inline-block;
 }
+/* animace prechodu cary */
 .nav-link-hover:after{
 	content: "";
 	display: block;
@@ -99,7 +101,7 @@ nav{
 }
 
 .nav-link-hover:hover:after{
-	width: 100%;
+	width: 100%; /* prechod cary pod logem */
 }
 
 .container .nav-links{
@@ -107,7 +109,7 @@ nav{
 }
 
 .logo{
-	animation: Shaking .8s linear;
+	animation: Shaking .8s linear; /* pri nacteni se logo zatrese */
 	animation-name: Shaking;
 	font-style: italic;
 }
@@ -119,6 +121,7 @@ nav{
 	background-color: var(--tertiary-color);
 	color: var(--tertiary-color-dark)!important;
 }
+/* jednotlive odkazy v navigacnim menu */
 .nav-links li a{
 	color: var(--secondary-color);
 	font-weight: bold;
@@ -128,7 +131,8 @@ nav{
   	border-radius: 5px;
   	transition: all 0.3s ease;
   	margin: 3px;
-}.nav-links li a:hover{
+}
+.nav-links li a:hover{
 	color: #b62c2c;
 }
 #hamburger{
@@ -148,6 +152,7 @@ nav{
 	.logo{
 		grid-area: logo;
 	}
+	/*hamburger se zobrazi vpravo */
 	#hamburger {
 		display: block;
 		background: none;
@@ -167,7 +172,7 @@ nav{
 	}
 
 	.nav-menu.active {
-		max-height: 100%;
+		max-height: 100%; /* rozšíření menu, teď pujdou videt i odkazy */
 		transition: max-height 0.4s ease-in-out;
 	}
 
@@ -180,7 +185,7 @@ nav{
 		font-size: 1.4rem;
 	}
 }
-
+/*animace zatresení*/
 @keyframes Shaking {
 	20% {
 		transform:rotate(-10deg);
@@ -199,7 +204,7 @@ nav{
 		opacity:1;
 	}
 }
-
+/*nastaveni celeho headeru*/
 header{
 	min-height: 100vh;
 	display: flex;
@@ -207,11 +212,12 @@ header{
 	justify-content: center;
 	background-size: cover;
 }
+/*blok s uvodnim obsahem*/
 .wrapper{
 	margin: 1rem;
 	display: grid;
 	gap: 3rem;
-	grid-template-columns: 2fr 1fr;
+	grid-template-columns: 2fr 1fr; /*nalevo text, napravo obrazek*/
 	align-items: center;
 	justify-content: center;
 }
@@ -223,6 +229,7 @@ header{
 .wrapper .img{
 	justify-self: center;
 }
+/*po najetí myši na obrázek se zatřese */
 .img:hover{
 	animation: Shaking .7s;
 }
@@ -232,14 +239,13 @@ header{
 	object-fit: cover;
 	min-width: 200px;
 	min-height: 200px;
-	border-radius: 50%;
-	filter: iris(100%);
+	border-radius: 50%; /* kulaty tvar*/
 	box-shadow: 0 15px 15px rgba(0,0,0,0.18);
 }
 @media (max-width: 768px) {
 	/* john keating header section */
 	.wrapper{
-		grid-template-columns: 1fr;
+		grid-template-columns: 1fr; /*prvky se zobrazi pod sebou*/
 		margin: 2rem;
 	}
 }
@@ -250,7 +256,7 @@ header{
 	box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* Poem style */
+/* hlavni text O Captain, My Captain */
 .poem-line {
 	font-family: "EB Garamond", serif;
 	font-size: 3rem;
@@ -258,7 +264,7 @@ header{
 	margin-bottom: 0.5rem;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 }
-
+/*our fearful trip is done*/
 .subtitle {
 	font-family: "EB Garamond", serif;
 	font-size: 1.5rem;
@@ -266,7 +272,7 @@ header{
 	color: var(--primary-color);
 	margin-bottom: 1.5rem;
 }
-
+/*no matter what anybody...*/
 .quote {
 	font-size: 1rem;
 	color: var(--tertiary-color);
@@ -275,14 +281,13 @@ header{
 	font-weight: bold;
 	margin-top: 2rem;
 }
-
-
 .header-img {
 	filter: sepia(0.25) contrast(1.1);
 	border: 4px solid var(--secondary-color);
 }
 
 /*ABOUT SECTION*/
+/*nastaveni minimalni výšky pro všechny sekce*/
 section{
 	min-height: 100vh;
 }
@@ -292,10 +297,10 @@ section{
 	justify-content: center;
 	padding: 4rem 0;
 }
-
+/*karta v sekci about*/
 .about-card {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr; /*rozděleno na dvě části*/
 	gap: 2rem;
 	border-radius: 1rem;
 	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25);
@@ -307,7 +312,7 @@ section{
 }
 @media (max-width: 768px) {
 	.about-card {
-		grid-template-columns: 1fr;
+		grid-template-columns: 1fr; /*pro mobilni telefony naskládáno pod sebe*/
 	}
 }
 
@@ -327,7 +332,7 @@ section{
 }
 
 
-/* Text */
+/* nastaveni textu v kartě */
 .about-card-content {
 	padding: 2rem;
 	display: flex;
@@ -369,7 +374,6 @@ section{
 	position: relative;
 }
 
-
 .quote-container{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -381,6 +385,7 @@ section{
 		grid-template-columns: 1fr;
 	}
 }
+/* nastaveni karty zobrazující citace */
 .quote-card {
 	position: relative;
 	width: 100%;
@@ -393,6 +398,7 @@ section{
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 	padding: 2rem;
 }
+/*nastaveni ikony založky*/
 .quote-card:after {
 	font-family: "Font Awesome 5 Free";
 	font-weight: bold;
@@ -420,6 +426,7 @@ section{
 	transition: .4s;
 
 }
+/*nastaveni textu citace*/
 .quote-container blockquote {
 	font-size: 1.5rem;
 	line-height: 1.2;
@@ -428,14 +435,22 @@ section{
 	margin: 0;
 	padding: 0 1rem;
 	opacity: 0;
-	animation: quotes_fade_anim 16s infinite;
+	animation: quotes_fade_anim 16s infinite; /*animace výměny citaci*/
 }
 
-.quote-container blockquote:nth-child(1) { animation-delay: 0s; }
-.quote-container blockquote:nth-child(2) { animation-delay: 4s; }
-.quote-container blockquote:nth-child(3) { animation-delay: 8s; }
-.quote-container blockquote:nth-child(4) { animation-delay: 12s; }
-
+.quote-container blockquote:nth-child(1) {
+	animation-delay: 0s;
+}
+.quote-container blockquote:nth-child(2) {
+	animation-delay: 4s;
+}
+.quote-container blockquote:nth-child(3) {
+	animation-delay: 8s;
+}
+.quote-container blockquote:nth-child(4) {
+	animation-delay: 12s;
+}
+/*postupne mizeni a zobrazování textu v citaci*/
 @keyframes quotes_fade_anim {
 	0% { opacity: 0; }
 	5% { opacity: 1; }
@@ -461,6 +476,7 @@ section{
 		margin: 0 5%;
 	}
 }
+/*nastaveni karty kontaktů*/
 .contact-card{
 	box-shadow: 0 15px 15px rgba(0,0,0,0.18);
 	width: 100%;
@@ -488,13 +504,15 @@ section{
 
 .contact-links .contact-img img{
 	width: 100%;
+	border: 4px solid var(--tertiary-color);
 }
 .contact-links-link{
 	position: relative;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr; /*4 odkazy vedle sebe*/
 	justify-items: center;
 }
+/*styl odkazů pod obrázkem*/
 .contact-links-link a{
 	text-align: center;
 	padding: 1rem;
@@ -507,11 +525,12 @@ section{
 	color: var(--tertiary-color-dark);
 	background: var(--tertiary-color);
 }
+/*blok labelu a inputů*/
 .form-group {
 	position: relative;
 	margin-bottom: 1.5rem;
 }
-
+/* styl inputů a textarea */
 .form-group input, .form-group textarea {
 	width: 100%;
 	padding: 12px;
@@ -522,7 +541,7 @@ section{
 }
 
 .form-group textarea {
-	resize: vertical;
+	resize: vertical; /*možné měnit pouze vertikální velikost textarea*/
 	min-height: 100px;
 }
 
@@ -537,6 +556,7 @@ input,textarea{
 	color: var(--secondary-color);
 	font-weight: bold;
 }
+/*tlačítko pro odeslání*/
 .btn-submit{
 	background: var(--tertiary-color);
 	padding: 16px;
@@ -550,7 +570,7 @@ input,textarea{
 
 .video-section{
 	display: flex;
-	flex-direction: column;
+	flex-direction: column; /*zobrazeni prvku pod sebou*/
 	justify-content: center;
 	align-items: center;
 	padding: 2rem;
@@ -584,45 +604,46 @@ video{
 .video-player{
 	position: relative;
 }
+/*nastaveni tlačítka pro spuštění videa, toho co je uprostřed*/
 .video:after{
 	font-family: "Font Awesome 5 Free";
 	font-weight: bold;
 	position: absolute;
-	content: "\f04b";
+	content: "\f04b"; /*ikonka play*/
 	padding: 23px 26px;
-	border-radius: 50%;
+	border-radius: 50%; /*zaobleni do kolečka*/
 	font-size: 1.1rem;
 	top: calc(50% - 26px);
 	left: calc(50% - 23px);
 	background-color: var(--last-color);
-	pointer-events: none;
+	pointer-events: none; /*možné ho "prokliknout"*/
 	text-align: center;
 	z-index: 5;
 	transition: .4s;
 	opacity: 0.8;
-
 }
 .video:hover:after{
 	background-color: var(--tertiary-color);
-	transform: scale(1.1);
+	transform: scale(1.1); /*zvětšení při najetí myši*/
 	transition: .5s transform ease, .6s color ease;
 	color: white;
 }
 
 .video:hover:active:after{
-	transform: scale(1.3);
+	transform: scale(1.3); /*ještě zvětšení při držení tlačítka myši*/
 	transition: .1s transform ease;
 }
+/*styl pro nezobrazení velkého tlačítka*/
 .video.video-no-after:after{
 	display: none;
 }
 
-
+/*ovládají prvky videa*/
 .video-controls{
 	position: absolute;
-	bottom: 0;
+	bottom: 0; /*ovládají prvky jsou umístěny dole*/
 	width: 100%;
-	padding: 16px;
+	padding: 16px; /*mírné odsazení*/
 	opacity: 0;
 }
 .controls-active{
@@ -635,11 +656,12 @@ video{
 	font-size: 1.2rem;
 }
 .video-controls button:nth-child(2){
-	float: right;
+	float: right; /*repeat napravo, mute nalevo*/
 }
 
 
 /********************************************** accordion ********************/
+/*transcript textu z videa*/
 .accordion{
 	background-color: var(--secondary-color);
 	color: var(--tertiary-color-dark);
@@ -658,7 +680,7 @@ video{
 /*f078*/
 .accordion:after {
 	font-family: "Font Awesome 5 Free";
-	content: '\f053';
+	content: '\f053'; /*ikonka šipky doleva*/
 	color: var(--tertiary-color-dark);
 	font-weight: bold;
 	float: right;
@@ -668,12 +690,13 @@ video{
 .accordion-content {
 	padding: 0 18px;
 	background-color: white;
-	display: block; /* Změněno z 'none' na 'block' */
-	overflow: scroll;
+	display: block;
+	overflow: scroll; /*zobrazení scroll baru při dosažení maximální výšky*/
 	max-height: 0;
 	width: 100%;
 	transition: max-height 0.4s ease;
 }
+/*nastaveni textu*/
 .accordion-content p {
 	color: var(--primary-color);
 	font-size: 1.6rem;
@@ -684,17 +707,16 @@ video{
 .accordion-content p:hover {
 	color: var(--tertiary-color);
 	cursor: pointer;
-
 }
 .accordion-active-top:after {
-	content: '\f078';
+	content: '\f078';  /*ikonka šipky dolu*/
 	transition:  0.4s ease-in-out ;
 }
 .accordion-active{
-	max-height: 500px;
+	max-height: 500px; /*maximálni výška*/
 }
 /* video section end */
-/*history section*/
+/************************history section*******************/
 
 .history-section{
 	margin: 2rem;
@@ -711,13 +733,14 @@ video{
 }
 .history-container:after{
 	content: "";
-	width: 5px;
-	height: 100%;
+	width: 5px; /*její šírka*/
+	height: 100%; /*čára je maximálně vysoká*/
 	background: var(--primary-color);
 	position: absolute;
 	left: 50%;
 	top: 0;
 }
+/*karta u historie*/
 .history-card{
 	margin: 20px;
 	max-width: 500px;
@@ -726,10 +749,11 @@ video{
 	padding: 2rem;
 	border-radius: 10px;
 	z-index: 5;
-	text-align: start;
+	text-align: start; /*text zarovnán vpravo*/
 	position: relative;
 	box-shadow: 2px 10px 10px #652222;
 }
+/*nastaveni kolečka nahoře uprostřed každé karty historie*/
 .history-card:after{
 	content: "";
 	width: 15px;
@@ -747,6 +771,7 @@ video{
 .history-card-header h2{
 	color: #C1A173;
 }
+/*styl text karty*/
 .history-card-body p{
 	font-size: 1.05rem;
 	letter-spacing: 1px;
@@ -767,6 +792,7 @@ video{
 	gap: 2rem;
 	overflow: hidden;
 }
+/*nastaveni karty u knih*/
 .book-card{
 	width: 100%;
 	height: 100%;
@@ -774,9 +800,10 @@ video{
 	position: relative;
 	transition: .5s transform;
 }
+/*zobrazení ikonky pro naznačení, že je potřeba na kartu najet myší*/
 .book-card:after{
 	position: absolute;
-	content: "\f577";
+	content: "\f577"; /*ikona otisku prstu*/
 	top: calc(50% - 30px);
 	left: calc(50% - 34px);
 	border-radius: 50%;
@@ -788,17 +815,18 @@ video{
 	font-weight: bold;
 	transition: 0.3s opacity;
 }
+/*zrušení viditelnosti obrázku otisku prstu*/
 .book-card:hover:after{
 	opacity: 0;
 	transition: 0.3s opacity;
 }
+/*OBRÁZEK fituje velikost karty*/
 .book-card img{
 	border-radius: 15px;
 	width: 100%;
 	height: 100%;
 }
 .card-text{
-	opacity: 1;
 	width: 100%;
 	height: 100%;
 	border-radius: 15px;
@@ -806,7 +834,6 @@ video{
 	position: absolute;
 	bottom: 0;
 	transition: .5s ease-in-out;
-
 }
 .card-text >*{
 	opacity: 0;
@@ -820,16 +847,19 @@ video{
 	color: whitesmoke;
 	font-size: 18px;
 }
+/*po najetí myší na kartu se text přesune nahoru a zobrazí se*/
 .book-card:hover .card-text >*{
 	opacity: 1;
 	transform: translateY(-100px);
 	transition: .5s transform ease-in-out, 0.6s opacity;
 }
+/*po najetí myší na kartu se zobrazí stín pod kartou a zvětší se celá karta o kousek*/
 .book-card:hover{
 	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 	transform: scale(1.05);
 	transition: .5s transform ease-in-out;
 }
+/*zobrazení černého pozadí po najetí myší*/
 .book-card:hover .card-text{
 	opacity: 1;
 	transition: .5s transform, 0.6s opacity ease, 0.4s background;
@@ -841,12 +871,6 @@ video{
 	color: white;
 	margin: 0;
 	padding: 0;
-}
-@media (max-width: 768px){
-	.books-container
-	{
-		flex-direction: column;
-	}
 }
 
 /*contact section end */
@@ -870,15 +894,17 @@ video{
 	transition: all .35s ease;
 	z-index: 6;
 }
-
+/*aktivace animace naplnění tlačítka barvou*/
 .back-to-top-button:hover:after{
 	top: 0;
 }
+/*nastaveni barvy textu a odstranění pozadí*/
 .back-to-top-button:hover{
 	transition: .4s;
 	color: var(--tertiary-color-dark);
 	background: transparent;
 }
+/*animace naplnění tlačítka barvou*/
 .back-to-top-button:after{
 	background: var(--tertiary-color);
 	content: "";
@@ -890,7 +916,7 @@ video{
 	z-index: -1;
 	transition: all .35s ease;
 }
-
+/*FOOTER*/
 footer{
 	margin: 1rem;
 	text-align: center;
@@ -899,37 +925,3 @@ footer a{
 	text-decoration: none;
 	font-weight: bold;
 }
-
-
-
-
-/*remove later*/
-/*.color-palette{*/
-/*	position: fixed;*/
-/*	bottom: 0;*/
-/*	left: 0;*/
-/*	padding-bottom: 5px;*/
-/*	background: white;*/
-/*	border-radius: 15px;*/
-/*	width: 75px;*/
-/*}*/
-/*.color-palette div{*/
-/*	width: 50px;*/
-/*	height: 50px;*/
-/*	margin: 0 auto;*/
-/*}*/
-/*.color-palette div:nth-child(1) {*/
-/*	background: var(--primary-color);*/
-/*}*/
-/*.color-palette div:nth-child(2) {*/
-/*	background: var(--secondary-color);*/
-/*}*/
-/*.color-palette div:nth-child(3) {*/
-/*	background: var(--tertiary-color);*/
-/*}*/
-/*.color-palette div:nth-child(4) {*/
-/*	background: var(--tertiary-color-dark);*/
-/*}*/
-/*.color-palette div:nth-child(5) {*/
-/*	background: var(--last-color);*/
-/*}*/
