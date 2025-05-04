@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="src/style.css">
+</head>
+<style>
+	@media screen and (min-width: 600px)
+	{
+		header {width: 100%;}
+		nav,section {width: 33%;}
+	}
+
+	@media screen and (max-width: 600px)
+	{
+		body{display: flex; flex-direction: column;}
+
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const nadpis = document.querySelector('h2');
+		nadpis.style.color = "red";
+		document.querySelector('header').onclick = () => {
+			document.querySelector('header').innerHTML = "clicked";
+		}
+	})
+
+</script>
+<body>
+
+<header>Test 2023</header>
+<nav>
+	<ul>
+		<li>Group A</li>
+		<li>Group B</li>
+	</ul>
+</nav>
+<section>
+	<h2>Group A</h2>
+	<p>Lorem, ipsum.</p>
+</section>
+<section>
+	<h2>Group B</h2>
+	<p>Lorem, ipsum.</p>
+</section>
+
+</body>
+</html>
