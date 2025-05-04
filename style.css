@@ -833,7 +833,7 @@ video{
 .book-card:hover .card-text{
 	opacity: 1;
 	transition: .5s transform, 0.6s opacity ease, 0.4s background;
-	background: rgba(0, 0, 0, 0.53);
+	background: rgba(0, 0, 0, 0.75);
 }
 .book-card h3{
 	font-size: 1.7rem;
