@@ -88,12 +88,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// nastaveni proklikavaciho textu pod videem
 	const captions = document.querySelectorAll(".video-typescript");
-
 	captions.forEach(caption => {
-		caption.addEventListener("click", () => {
+		caption.addEventListener("click", e => {
+
+			const activeCaptions = document.querySelectorAll("p.accordion-content-active");
+			activeCaptions.forEach(e => {
+				e.classList.remove('accordion-content-active');
+			})
+
+			caption.classList.add("accordion-content-active");
+
 			const time = parseFloat(caption.getAttribute("aria-time")); // prevedeni hodnoty z aria-time na float hodnotu, kterou bude potom nastaven aktualni cas videa
 			media.currentTime = time; // nastaveni videa do prideleneho casu
 			media.play(); // pusteni videa
+
 			controls.classList.add('controls-active'); // zobrazeni ikonek na ovladani
 			playButton.classList.add('video-no-after');
 		});

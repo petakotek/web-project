@@ -621,6 +621,7 @@ video{
 	z-index: 5;
 	transition: .4s;
 	opacity: 0.8;
+	filter: drop-shadow(0 0 5px var(--tertiary-color));
 }
 .video:hover:after{
 	background-color: var(--tertiary-color);
@@ -706,7 +707,12 @@ video{
 }
 .accordion-content p:hover {
 	color: var(--tertiary-color);
+	text-shadow: var(--tertiary-color) 1px 0 10px;
 	cursor: pointer;
+}
+.accordion-content-active{
+	color: var(--tertiary-color);
+	text-shadow: var(--tertiary-color) 1px 0 10px;
 }
 .accordion-active-top:after {
 	content: '\f078';  /*ikonka šipky dolu*/
