@@ -91,12 +91,13 @@ document.addEventListener("DOMContentLoaded", () => {
 	captions.forEach(caption => {
 		caption.addEventListener("click", e => {
 
+			// odstraneni vsech aktualne aktivnich odkazu, volene pole v pripade zaseku
 			const activeCaptions = document.querySelectorAll("p.accordion-content-active");
 			activeCaptions.forEach(e => {
-				e.classList.remove('accordion-content-active');
+				e.classList.remove('accordion-content-active'); // odstrani aktivni odkaz
 			})
 
-			caption.classList.add("accordion-content-active");
+			caption.classList.add("accordion-content-active"); // odkaz, na ktery se nove kliklo dostane pridelenou active tridu
 
 			const time = parseFloat(caption.getAttribute("aria-time")); // prevedeni hodnoty z aria-time na float hodnotu, kterou bude potom nastaven aktualni cas videa
 			media.currentTime = time; // nastaveni videa do prideleneho casu
@@ -108,7 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 
-	media.removeAttribute("controls");
 	controls.style.visibility = "visible";
 })
 
